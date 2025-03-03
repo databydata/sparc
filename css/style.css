@@ -65,6 +65,7 @@ body {
      line-height: 1.80857;
      font-weight: normal;
      min-height: 100vh;
+     overflow-x: hidden;
 }
 
 a {
@@ -603,7 +604,7 @@ button {
 }
 
 #team-achievements .box {
-     background:rgba(0, 184, 172, 0.39);
+     background: rgba(0, 184, 172, 0.39);
      padding: 5%;
      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
      height: 100%;
@@ -675,11 +676,93 @@ button {
      color: var(--text-color);
 }
 
+
+#journey .journey {
+     overflow-x: auto;
+     display: flex;
+}
+
+
 #journey .box {
      padding: 6rem 4rem;
      background-color: var(--dark-blue);
 }
 
+
+#journey .journey-container:first-child {
+     margin-top: 120px;
+}
+
+#journey .journey-container:nth-of-type(2) {
+     margin-top: 100px;
+     margin-left: 2%;
+}
+
+#journey .journey-container:nth-of-type(3) {
+     margin-top: 80px;
+     margin-left: 2%;
+}
+
+#journey .journey-container:nth-of-type(4) {
+     margin-top: 60px;
+     margin-left: 2%;
+}
+
+#journey .journey-container:nth-of-type(5) {
+     margin-top: 40px;
+     margin-left: 2%;
+}
+
+#journey .journey-container:nth-of-type(6) {
+     margin-top: 20px;
+     margin-left: 2%;
+}
+
+#journey .journey-container:nth-of-type(7) {
+     margin-top: 0px;
+     margin-left: 2%;
+}
+
+#journey .journey-container h2 {
+     font-size: 15px;
+}
+
+#journey .journey-box {
+     padding: 20px;
+     background-color: var(--dark-blue);
+     height: 300px;
+}
+
+#journey .journey-box li {
+     font-size: 10px;
+}
+
+#journey .journey-box {
+     padding-inline-start: 1.5em;
+     font-weight: 400;
+
+     ::marker {
+          content: "*";
+          color: #2bded3;
+     }
+}
+
+#journey .journey-box li {
+     position: relative;
+     padding-inline-start: 0.5em;
+     padding-top: 1.5em;
+     border-bottom: 1px solid #48b2;
+     cursor: default;
+     transition: color 0.4s;
+
+     &:hover {
+          color: #2bded3;
+
+          &::marker {
+               font-weight: 700;
+          }
+     }
+}
 
 #journey .box p {
      font-size: 25px;
@@ -906,17 +989,20 @@ button {
      background-image: linear-gradient(0deg, rgba(0, 184, 172, 0.39), transparent 66%);
 }
 
-#highlights .box, #highlights .box-rv{
+#highlights .box,
+#highlights .box-rv {
      border-radius: 0px;
      border: none;
      padding: 2%;
-}    
+}
 
-#highlights .box>h3 , #highlights .box-rv>h3{
+#highlights .box>h3,
+#highlights .box-rv>h3 {
      font-size: 25px;
 }
 
-#highlights .box img , #highlights .box-rv img{
+#highlights .box img,
+#highlights .box-rv img {
      height: 50px;
 }
 
@@ -938,6 +1024,7 @@ button {
      cursor: default;
      transition: color 0.4s;
      font-size: 13px;
+
      &:hover {
           color: #2bded3;
 
